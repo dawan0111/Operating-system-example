@@ -7,8 +7,19 @@ int value = 5;
 
 int main()
 {
-pid_t pid;
-
+	// pid_t pid;
+	// pid_t pid2;
+	// pid_t pid3;
+	// pid = fork();
+	// printf("fork1 ");
+	// printf("pid: %d \n", pid);
+	// pid2 = fork();
+	// printf("fork2 ");
+	// printf("pid2: %d \n", pid2);
+	// pid3 = fork();
+	// printf("fork3 ");
+	// printf("pid3: %d \n", pid3);
+	pid_t pid;
 	/* fork a child process */
 	pid = fork();
 
