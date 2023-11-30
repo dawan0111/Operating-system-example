@@ -10,3 +10,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(create_thread create_thread.cpp)
+add_executable(scheduling_thread scheduling_thread.cpp)
