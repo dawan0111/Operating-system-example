@@ -6,6 +6,7 @@ void *runner(void *param);
 
 int main(int argc, char *argv[]) {
     int i, scope;
+    int values[NUM_THREADS];
     pthread_t tid[NUM_THREADS];
     pthread_attr_t attr;
 
@@ -25,7 +26,8 @@ int main(int argc, char *argv[]) {
         pthread_attr_setscope(&attr, PTHREAD_SCOPE_SYSTEM);
 
         for (i = 0; i < NUM_THREADS; i++) {
-            pthread_create(&tid[i], &attr, runner, &i);
+            values[i] = i;
+            pthread_create(&tid[i], &attr, runner, &values[i]);
         }
 
         for (i = 0; i < NUM_THREADS; i++) {
