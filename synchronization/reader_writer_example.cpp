@@ -16,6 +16,8 @@ void* read_runner(void *arg) {
 
     pthread_rwlock_unlock(&g_rwLock);
     std::cout << "Unlock the read lock" << std::endl;
+
+	pthread_exit(0);
 }
 
 void* write_runner(void *arg) {
@@ -27,6 +29,8 @@ void* write_runner(void *arg) {
 
     pthread_rwlock_unlock(&g_rwLock);
     std::cout << "Unlock the write lock" << std::endl;
+
+	pthread_exit(0);
   }
 
 int main() {
@@ -42,13 +46,10 @@ int main() {
     ret = pthread_create(&read_thr[0], NULL, read_runner, NULL);
     ret = pthread_create(&write_thr[0], NULL, write_runner, NULL);
 
-    sleep(5);
-
     ret = pthread_create(&read_thr[1], NULL, read_runner, NULL);
 
     pthread_join(write_thr[1], NULL);
     pthread_join(read_thr[0], NULL);
-
     pthread_join(read_thr[1], NULL);
     
 
