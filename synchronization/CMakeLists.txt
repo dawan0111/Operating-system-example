@@ -11,3 +11,4 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(reader_writer_example reader_writer_example.cpp)
 add_executable(atomic_variable_example atomic_variable_example.cpp)
+add_executable(atomic_mutex_compare_example atomic_mutex_compare_example.cpp)
