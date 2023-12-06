@@ -42,12 +42,4 @@ int main() {
 	pthread_create(&tid[1], &attr, second_thread, NULL);
 	pthread_join(tid[0], NULL);
 	pthread_join(tid[1], NULL);
-
-	/*
-		print:
-		mutex: 0.137445 seconds
-		atomic: 0.0355448 seconds
-
-		result: mutex is slower than atomic. (overhead)
-	*/
 }
