@@ -10,3 +10,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(multithread_deadlock_example multithread_deadlock.cpp)
+add_executable(deadlock_avoidance_example deadlock_avoidance.cpp)
